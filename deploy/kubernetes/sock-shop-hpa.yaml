@@ -46,13 +46,13 @@ spec:
 apiVersion: autoscaling/v1
 kind: HorizontalPodAutoscaler
 metadata:
-  name: front-end
+  name: orders
   namespace: sock-shop
 spec:
   scaleTargetRef:
     apiVersion: apps/v1beta1
     kind: Deployment
-    name: front-end
+    name: orders
 
   minReplicas: 1
   maxReplicas: 1000
@@ -61,13 +61,13 @@ spec:
 apiVersion: autoscaling/v1
 kind: HorizontalPodAutoscaler
 metadata:
-  name: front-end
+  name: payment
   namespace: sock-shop
 spec:
   scaleTargetRef:
     apiVersion: apps/v1beta1
     kind: Deployment
-    name: front-end
+    name: payment
 
   minReplicas: 1
   maxReplicas: 1000
